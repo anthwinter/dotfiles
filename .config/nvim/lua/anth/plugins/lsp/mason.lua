@@ -25,6 +25,7 @@ return {
 
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
+			automatic_installation = true,
 			ensure_installed = {
 				"ts_ls",
 				"html",
@@ -40,6 +41,7 @@ return {
 		})
 
 		mason_tool_installer.setup({
+			automatic_installation = true,
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
