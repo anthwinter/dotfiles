@@ -2,7 +2,7 @@
 shell = "/bin/zsh"
 
 [window]
-padding = { x = 2, y = 2 }
+padding = { x = 10, y = 10 }
 startup_mode = "Maximized"
 
 [font]
