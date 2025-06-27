@@ -31,7 +31,7 @@ return {
 				"html-lsp",
 				"css-lsp",
 				"lua-language-server",
-				"graphql-language-server",
+				"graphql",
 				"pyright",
 			},
 		})
