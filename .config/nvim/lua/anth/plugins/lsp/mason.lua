@@ -27,15 +27,11 @@ return {
 			-- list of servers for mason to install
 			automatic_installation = true,
 			ensure_installed = {
-				"ts_ls",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"svelte",
-				"lua_ls",
-				"graphql",
-				"emmet_ls",
-				"prismals",
+				"typescript-language-server",
+				"html-lsp",
+				"css-lsp",
+				"lua-language-server",
+				"graphql-language-server",
 				"pyright",
 			},
 		})
