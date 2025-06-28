@@ -27,10 +27,10 @@ return {
 			-- list of servers for mason to install
 			automatic_installation = true,
 			ensure_installed = {
-				"typescript-language-server",
-				"html-lsp",
-				"css-lsp",
-				"lua-language-server",
+				"ts_ls",
+				"html",
+				"cssls",
+				"lua_ls",
 				"graphql",
 				"pyright",
 			},
