@@ -1,15 +1,15 @@
 return {
   {
     "gbprod/nord.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("nord").setup({})
-			vim.cmd.colorscheme("nord")
-		end,
-		install = {
-			colorscheme = { "nord" },
-		},
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("nord").setup({})
+      vim.cmd.colorscheme("nord")
+    end,
+    install = {
+      colorscheme = { "nord" },
+    },
 
     -- "folke/tokyonight.nvim",
     -- priority = 1000, -- make sure to load this before all the other start plugins
