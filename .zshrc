@@ -28,8 +28,27 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 bindkey "$terminfo[kcuu1]" history-beginning-search-backward
 bindkey "$terminfo[kcud1]" history-beginning-search-forward
 
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# Find and set branch name var if in git repository.
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '(%{%F{117}%}'$branch'%{%f%}%{%F{75}%})'
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+
 # prompt
-export PS1=$'\uea9f %{%F{75}%}%1~ %{%f%}'
+export PS1=$'\uea9f %{%F{75}%}%1~$(git_branch_name) %{%f%}'
 
 # nvim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
