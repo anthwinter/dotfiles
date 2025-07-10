@@ -39,7 +39,7 @@ function git_branch_name()
   then
     :
   else
-    echo '(%{%F{117}%}'$branch'%{%f%}%{%F{75}%})'
+    echo '(%{%F{117}%}%35>...>'$branch'%>>%{%f%}%{%F{75}%})'
   fi
 }
 
