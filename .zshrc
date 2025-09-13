@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 # vim bindings
 bindkey -v
 
@@ -69,3 +72,14 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/anth/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+alias k='kubectl'
+# Load the kubectl completion code for zsh[1] into the current shell
+source <(kubectl completion zsh)
+# Set the kubectl completion code for zsh[1] to autoload on startup
+# kubectl completion zsh > "${fpath[1]}/_kubectl" 
+
