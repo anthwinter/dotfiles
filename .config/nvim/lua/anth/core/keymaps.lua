@@ -35,6 +35,10 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
 
+-- Search down/up and center cursor
+vim.keymap.set("n", "n", "nzz", {})
+vim.keymap.set("n", "N", "Nzz", {})
+
 -- move line up
 vim.keymap.set("n", "<C-A-k>", "ddkP", {})
 -- move line down
