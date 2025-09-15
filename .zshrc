@@ -81,5 +81,7 @@ alias k='kubectl'
 # Load the kubectl completion code for zsh[1] into the current shell
 source <(kubectl completion zsh)
 # Set the kubectl completion code for zsh[1] to autoload on startup
-# kubectl completion zsh > "${fpath[1]}/_kubectl" 
+# kubectl completion zsh > "${fpath[1]}/_kubectl"
 
+# fluxcd completion
+command -v flux >/dev/null && . <(flux completion zsh)
