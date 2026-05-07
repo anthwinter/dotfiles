@@ -85,3 +85,4 @@ source <(kubectl completion zsh)
 
 # fluxcd completion
 command -v flux >/dev/null && . <(flux completion zsh)
+export PATH="$HOME/.local/bin:$PATH"
