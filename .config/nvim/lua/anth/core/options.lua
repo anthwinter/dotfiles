@@ -42,3 +42,11 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- .env files: set comment character so gc works
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { ".env", ".env.*" },
+  callback = function()
+    vim.opt_local.commentstring = "# %s"
+  end,
+})
