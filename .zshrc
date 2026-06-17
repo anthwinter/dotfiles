@@ -77,11 +77,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/home/anth/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-alias k='kubectl'
-# Load the kubectl completion code for zsh[1] into the current shell
-source <(kubectl completion zsh)
-# Set the kubectl completion code for zsh[1] to autoload on startup
-# kubectl completion zsh > "${fpath[1]}/_kubectl"
+if command -v kubectl >/dev/null; then
+  alias k='kubectl'
+  # Load the kubectl completion code for zsh[1] into the current shell
+  source <(kubectl completion zsh)
+  # Set the kubectl completion code for zsh[1] to autoload on startup
+  # kubectl completion zsh > "${fpath[1]}/_kubectl"
+fi
 
 # fluxcd completion
 command -v flux >/dev/null && . <(flux completion zsh)
