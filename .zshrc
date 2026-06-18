@@ -21,6 +21,9 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
+# clear terminal without history
+alias clear=reset
+
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between sessions
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
