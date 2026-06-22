@@ -52,7 +52,7 @@ bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 # Find and set branch name var if in git repository.
 function git_branch_name()
 {
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  branch=$(git symbolic-ref --short HEAD 2> /dev/null)
   if [[ $branch == "" ]];
   then
     :
